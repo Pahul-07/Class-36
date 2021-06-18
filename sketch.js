@@ -10,7 +10,7 @@ var bird, slingshot;
 
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
-
+var score=0
 
 function preload() {
     getTime();
@@ -50,6 +50,9 @@ function draw(){
     if(backgroundImg)
         background(backgroundImg);
     
+    textSize(30);
+    fill("blue")    
+    text("Score: "+ score,30,50);
     
     Engine.update(engine);
     //strokeWeight(4);
@@ -74,6 +77,7 @@ function draw(){
     platform.display();
    
     slingshot.display();    
+    
 }
 
 function mouseDragged(){
